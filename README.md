@@ -312,6 +312,7 @@ Task - 6 : Don't loose your code and your efforts
     ```
     git remote add origin https://github.com/test.git
     git branch -M develop
+    git commit 
     git push -u origin develop
     ```
 ```
