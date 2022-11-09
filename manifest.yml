@@ -1,0 +1,8 @@
+---
+applications:
+- name: task-manager
+  path: srv/target/task-manager-exec.jar
+  random-route: true
+  services:
+  - taskmanager-hana
+  - taskmanager-xsuaa

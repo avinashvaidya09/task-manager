@@ -1,0 +1,11 @@
+---
+spring:
+  config.activate.on-profile: cloud
+cds:
+  datasource:
+    auto-config.enabled: false
+  security:
+    mock:
+      users:
+        - name: taskmanager
+          password: admin123

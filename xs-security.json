@@ -1,0 +1,28 @@
+{
+  "xsappname": "task-manager",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Administrators",
+      "description": "Administrators"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Administrators",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Administrators"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "task-manager_Administrators",
+      "description": "Task Manager Administrators",
+      "role-template-references": ["$XSAPPNAME.Administrators"]
+    }
+  ]
+}
