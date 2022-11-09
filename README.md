@@ -54,7 +54,7 @@ package as per my requirements.
     * Compositions - This relationship is tightly coupled. By this, I mean, parent is a container for all children. If parent is deleted, it will delete all the children.
 6. To go to the definition of the CDS keywords, just press `CTRL` and hover on the keyword. This will take you to the reference material.
 
-There is lot to understand and learn in the CDS Definition Language (CDL). For more details - https://cap.cloud.sap/docs/cds/cdl#entities 
+There is lot to understand and learn in the CDS Definition Language (CDL). For more details - [link](https://cap.cloud.sap/docs/cds/cdl#entities) 
 
 ## Define Admin Service
 ### In this section we will define the admin service to expose the data model created in data-model.cds
@@ -208,7 +208,7 @@ Task - 3 : Deploy application on SAP BTP cloud foundry environment.
     ```
 
 ```
-Task - 4 : Enabled authentication and authorization using SAP BTP XSUAA service.
+Task - 4 : Enable authentication and authorization using SAP BTP XSUAA service.
 ```
 
 1. Create file `xs-security.json` in the root project directory with the help of following command
