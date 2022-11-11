@@ -1,6 +1,6 @@
 # Project Set up and Details
 
-At the end of this hands on excercise, you will accomplish below tasks - 
+At the end of this hands on exercise, you will accomplish below tasks - 
 
 1. Created a CAP Java application to create user and assign roles. This project will be
 further enhanced to add tasks for the users and remind him/her for completion of the tasks.
@@ -37,7 +37,7 @@ package as per my requirements.
     mvn -B archetype:generate -DarchetypeArtifactId=cds-services-archetype -DarchetypeGroupId=com.sap.cds \ -DarchetypeVersion=RELEASE \
     -DgroupId=com.sap.cap -DartifactId=task-manager -Dpackage=com.sap.cap.taskmanager 
     ```
-4. This will initialize maven archtype and create a new project with name `task-mamager`.
+4. This will initialize maven archetype and create a new project with name `task-mamager`.
 5. The `db` folder contains data-model.cds where you define database entities/artifacts.
 6. The `srv` folder contains the JAVA application files.
 
@@ -218,7 +218,7 @@ Task - 4 : Enable authentication and authorization using SAP BTP XSUAA service.
     This will create xs-security.json with a predefined schema.
 
 2. Update the below 2 properties
-    * xsappname - Give a desired name
+    * xsappname - name of your application
     * role-collections.name - Give a desired name. This will create a role collection with name `task-manager_Administrators`
 
 3. Go to SAP BTP subaccount -> security -> Add your user id to this role collection. if you are not admin, ask admin user to add your user id in the `task-manager_Administrators` role collection.
