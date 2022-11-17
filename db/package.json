@@ -9,10 +9,5 @@
   "scripts": {
     "start": "node node_modules/@sap/hdi-deploy/deploy.js",
     "build": "npm i && npx -p @sap/cds-dk@^6 cds build .. --for hana --production"
-  },
-  "cds": {
-    "features": {
-      "assert_integrity": "db"
-    }
-}
+  }
 }
