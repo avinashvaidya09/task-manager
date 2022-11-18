@@ -4,5 +4,7 @@ service AdminService {
     
     entity Role as projection on db.Roles;
     entity User as projection on db.Users;
+    entity Category as projection on db.Categories;
+    entity Task as projection on db.Tasks;
 
 }

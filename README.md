@@ -129,7 +129,7 @@ Task - 2 : Integrate your project with HANA database on BTP (Cloud)
 
 7. To create SAP HANA service instance on the cf environment and to push database artifacts, run the following command on terminal
     ```
-    cds deploy --to hana:taskmanaher-hana --store-credentials
+    cds deploy --to hana:taskmanager-hana --store-credentials
     ```
 
     * The above command will create HANA service instance with name `task-manager`
@@ -154,7 +154,7 @@ Task - 2 : Integrate your project with HANA database on BTP (Cloud)
     ```
 
 3. The above command will ensure that cloud profile is picked up and not the default H2 database.
-4. You should see the below line in the logs - `Registered DataSource 'taskmanaher-hana'`.
+4. You should see the below line in the logs - `Registered DataSource 'taskmanager-hana'`.
 5. To test, open `requests.http` and test the application. 
 
 ```
