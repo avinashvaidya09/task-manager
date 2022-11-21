@@ -2,11 +2,15 @@ GET http://localhost:8080/odata/v4/AdminService/Role
 Content-Type: application/json
 Authorization: Basic authenticated:
 
-POST http://localhost:8080/odata/v4/AdminService/Role
+POST http://localhost:8080/odata/v4/AdminService/User
 Content-Type: application/json
 Authorization: Basic authenticated:
 
-{"name":"admin","active": true}
-
-
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@remindme.com",
+    "phone": "9878676554",
+    "userRole_name": "Admin"
+}
 
