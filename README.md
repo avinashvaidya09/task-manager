@@ -47,8 +47,8 @@ package as per my requirements.
 1. Open `data-model.cds` file.
 2. On the top your will define the namespace. This is the name with which the file will be imported in service.
 3. This file also imports the package `@sap/cds/common` which imports common definitions, eg. cuid, managed which I haved used in the entity definition.
-3. In this I have defined two entities (Roles and Users) with columns. This will be enhanced further to add third entity - Tasks.
-4. In this I have tried to defined relationship between entities using `Association`
+3. In this I have defined 4 entities with columns.
+4. In this I have tried to defined relationship between entities using `Association` and `Composition`
 5. Relationships can be of two types
     * Associations - This relationship is loosely coupled. By this, I mean, if parent is deleted, it will not affect children.
     * Compositions - This relationship is tightly coupled. By this, I mean, parent is a container for all children. If parent is deleted, it will delete all the children.
