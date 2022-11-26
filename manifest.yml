@@ -6,3 +6,4 @@ applications:
   services:
   - taskmanager-hana
   - taskmanager-xsuaa
+  - taskmanager-events

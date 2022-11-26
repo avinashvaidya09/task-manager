@@ -7,9 +7,9 @@ Content-Type: application/json
 Authorization: Basic authenticated:
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@remindme.com",
+    "firstName": "Avinash",
+    "lastName": "Vaidya",
+    "email": "avinash.vaidya1@remindme.com",
     "phone": "9878676554",
     "userRole_name": "Admin"
 }

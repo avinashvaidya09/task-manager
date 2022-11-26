@@ -8,6 +8,9 @@
   "requires": {
     "db": {
       "kind": "hana-cloud"
-    }
+    },
+    "messaging": {
+      "kind": "enterprise-messaging"
+  }
   }
 }

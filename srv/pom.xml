@@ -42,6 +42,12 @@
 			<groupId>com.sap.cds</groupId>
 			<artifactId>cds-starter-cloudfoundry</artifactId>
 		</dependency>
+
+		<dependency>
+    		<groupId>com.sap.cds</groupId>
+    		<artifactId>cds-feature-enterprise-messaging</artifactId>
+    		<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

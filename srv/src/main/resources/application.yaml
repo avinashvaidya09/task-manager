@@ -9,3 +9,9 @@ cds:
       users:
         - name: taskmanager
           password: admin123
+  messaging:
+    services:
+      name: "taskmanager-events"
+      kind: "enterprise-messaging"
+      queue: 
+        name: "user-registration"
