@@ -20,7 +20,7 @@ entity Users : managed {
             firstName : String not null;
             lastName  : String not null;
             phone     : String not null;
-            password  : String;
+            otp       : String;
             active    : Boolean default TRUE;
             userRole  : Association to one Roles @assert.target;
             tasks     : Composition of many Tasks
