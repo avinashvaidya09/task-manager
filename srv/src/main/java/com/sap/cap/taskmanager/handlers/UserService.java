@@ -1,6 +1,4 @@
-package com.sap.cap.taskmanager.handlers;
 
-import java.security.SecureRandom;
 
 import com.nimbusds.jose.shaded.json.JSONObject;
 import com.sap.cap.taskmanager.util.TaskManagerUtil;
@@ -62,33 +60,5 @@ public class UserService implements EventHandler{
         messagingService.emit("sap/taskmanager-events/event-mesh/user-registration-topic", payload);
 
     }
-
-    @Before(event = CqnService.EVENT_UPDATE , entity = User_.CDS_NAME)
-    public void beforeUpdate(User userData) {
-
-        String otp = PASSWORD_PREFIX + String.valueOf(TaskManagerUtil.generateRandomNumber()) ;
-
-        userData.setOtp(otp);
-
-        logger.info("Generated default otp for {}", userData.getFirstName());
-
-    }
-
-    @After(event = CqnService.EVENT_UPDATE , entity = User_.CDS_NAME)
-    public void afterUpdate(User userData) {
-
-        JSONObject payload = new JSONObject();
-
-        JSONObject jsonObject = new JSONObject();
-
-        jsonObject.put("firstName", userData.getFirstName());
-        jsonObject.put("otp", userData.getOtp());
-
-        payload.put("data", jsonObject);
-
-        logger.info("Sending message to the queue");
-
-        messagingService.emit("sap/taskmanager-events/event-mesh/user-otp-topic", payload);
-
-    }
+    
 }
