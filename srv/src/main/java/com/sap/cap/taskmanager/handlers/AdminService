@@ -1,5 +1,7 @@
 
 
+import java.util.Objects;
+
 import com.nimbusds.jose.shaded.json.JSONObject;
 import com.sap.cap.taskmanager.util.TaskManagerUtil;
 import com.sap.cds.services.cds.CqnService;
@@ -21,11 +23,13 @@ import cds.gen.adminservice.User_;
 
 @Component
 @ServiceName("AdminService")
-public class UserService implements EventHandler{
+public class AdminService implements EventHandler {
     
     Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    private static final String PASSWORD_PREFIX = "Welcome";
+    private static final String WELCOME_STRING = "Welcome to Task Manager to efficiently manage your tasks";
+
+    private static final String PASSWORD_PREFIX = "capm";
 
     @Autowired
     @Qualifier("taskmanager-events")
@@ -50,12 +54,18 @@ public class UserService implements EventHandler{
 
         JSONObject jsonObject = new JSONObject();
 
-        jsonObject.put("firstName", userData.getFirstName());
-        jsonObject.put("otp", userData.getOtp());
+        jsonObject.put("message", WELCOME_STRING);
+        jsonObject.put("fromPhone", "+15165186002");
+        if(Objects.nonNull(userData.getPhone()) && userData.getPhone().startsWith("+1")){
+            jsonObject.put("toPhone",userData.getPhone());
+        } else {
+            jsonObject.put("toPhone","+1" + userData.getPhone());
+        }
+        
 
         payload.put("data", jsonObject);
 
-        logger.info("Sending message to the queue");
+        logger.info("Sending message to the topic in SAP Event Mesh");
 
         messagingService.emit("sap/taskmanager-events/event-mesh/user-registration-topic", payload);
 

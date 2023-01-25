@@ -2,6 +2,15 @@ GET http://localhost:8080/odata/v4/AdminService/Role
 Content-Type: application/json
 Authorization: Basic authenticated:
 
+POST http://localhost:8080/odata/v4/AdminService/Role
+Content-Type: application/json
+Authorization: Basic authenticated: 
+
+{
+    "name": "Manager",
+    "active": true
+}
+
 POST http://localhost:8080/odata/v4/AdminService/User
 Content-Type: application/json
 Authorization: Basic authenticated:
@@ -9,7 +18,7 @@ Authorization: Basic authenticated:
 {
     "firstName": "Avinash",
     "lastName": "Vaidya",
-    "email": "avinash.vaidya1@remindme.com",
+    "email": "avinash.vaidya2@remindme.com",
     "phone": "9878676554",
     "userRole_name": "Admin"
 }

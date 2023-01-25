@@ -3,7 +3,8 @@ spring:
   config.activate.on-profile: cloud
 cds:
   datasource:
-    auto-config.enabled: false
+    auto-config.enabled: true
+    binding: "taskmanager-hana"
   security:
     mock:
       users:
