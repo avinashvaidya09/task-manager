@@ -4,7 +4,6 @@ spring:
 cds:
   datasource:
     auto-config.enabled: true
-    binding: "taskmanager-hana"
   security:
     mock:
       users:

@@ -12,6 +12,10 @@
 
 	<name>task-manager</name>
 
+	<properties>
+		<cds.services.version>1.28.1</cds.services.version>
+	</properties>
+
 	<!-- ACTUAL DEPENDENCIES -->
 	<dependencies>
 		<!-- CDS SPRING BOOT STARTER -->
@@ -27,10 +31,23 @@
 			<scope>runtime</scope>
 		</dependency>
 
+
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+    		<groupId>com.sap.cds</groupId>
+			<artifactId>cds-feature-hana</artifactId>
+			<version>${cds.services.version}</version>
+		</dependency>
+		
+		<dependency>
+    			<groupId>com.sap.cds</groupId>
+    			<artifactId>cds-starter-cloudfoundry</artifactId>
+				<version>${cds.services.version}</version>
+		</dependency>
+		<dependency>
+    			<groupId>com.sap.cds</groupId>
+    			<artifactId>cds-feature-enterprise-messaging</artifactId>
+    			<version>${cds.services.version}</version>
+				<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
