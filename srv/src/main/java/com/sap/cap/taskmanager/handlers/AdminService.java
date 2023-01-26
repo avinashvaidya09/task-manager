@@ -27,7 +27,7 @@ public class AdminService implements EventHandler {
     
     Logger logger = LoggerFactory.getLogger(AdminService.class);
 
-    private static final String WELCOME_STRING = "Welcome to Task Manager to efficiently manage your tasks";
+    private static final String WELCOME_STRING = "Welcome! Start to manager your tasks efficiently";
 
     private static final String PASSWORD_PREFIX = "capm";
 
