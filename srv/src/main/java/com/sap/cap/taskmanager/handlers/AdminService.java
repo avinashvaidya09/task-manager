@@ -25,7 +25,7 @@ import cds.gen.adminservice.User_;
 @ServiceName("AdminService")
 public class AdminService implements EventHandler {
     
-    Logger logger = LoggerFactory.getLogger(UserService.class);
+    Logger logger = LoggerFactory.getLogger(AdminService.class);
 
     private static final String WELCOME_STRING = "Welcome to Task Manager to efficiently manage your tasks";
 
